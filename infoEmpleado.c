@@ -1,15 +1,13 @@
 #include <stdio.h>
-int anioActual= 2020;
 #define PRECIO_HORAS_EXTRA 60;
+#define BONIFICACION_DEPARTAMENTO_A 2750;
+
+int anioActual= 2020;
+
 int main(){
 
-  int edad;
-  int anioNacimiento;
-  int horasExtraTrabajadas;
-  int haRealizadoHorasExtra;
-  
-  float sueldoAnual;
-  float totalHorasExtraAPagar;
+  int edad,anioNacimiento,horasExtraTrabajadas,haRealizadoHorasExtra,sueldoTotalAnual;
+  float sueldoAnual, totalHorasExtraAPagar;
   char departamento;
 
 
@@ -30,6 +28,7 @@ int main(){
   totalHorasExtraAPagar = horasExtraTrabajadas * PRECIO_HORAS_EXTRA;
   haRealizadoHorasExtra = totalHorasExtraAPagar;
 
+  if(departamento == 'A' || departamento == 'a'){sueldoTotalAnual = sueldoAnual + BONIFICACION_DEPARTAMENTO_A;}
 
   return 0;
 
